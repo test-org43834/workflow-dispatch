@@ -6,9 +6,11 @@ on:
       string:
         type: string
         required: true
+        default: asdf
       boolean:
         type: boolean
         required: true
+        default: asdf
       choice:
         type: choice
         options:
@@ -16,9 +18,11 @@ on:
           - bravo
           - charlie
         required: true
+        default: asdf
       environment:
         type: environment
         required: true
+        default: asdf
 
 jobs:
   build:
