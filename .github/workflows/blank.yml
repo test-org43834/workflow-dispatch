@@ -10,7 +10,7 @@ on:
       boolean:
         type: boolean
         required: true
-        default: "true"
+        default: "True"
       choice:
         type: choice
         options:
