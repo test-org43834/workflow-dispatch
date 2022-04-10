@@ -5,16 +5,20 @@ on:
     inputs:
       string:
         type: string
+        required: true
       boolean:
         type: boolean
+        required: true
       choice:
         type: choice
         options:
           - alpha
           - bravo
           - charlie
+        required: true
       environment:
         type: environment
+        required: true
 
 jobs:
   build:
