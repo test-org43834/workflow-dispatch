@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      string:
+        type: string
+        default: asdf
+      boolean:
+        type: boolean
+        required: true
+        default: "True"
+      choice:
+        type: choice
+        options:
+          - alpha
+          - bravo
+          - charlie
+        required: true
+        default: asdf
+      environment:
+        type: environment
+        required: true
+        default: asdf
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Run a one-line script
+        env:
+          INPUTS: ${{ toJSON(github.event.inputs) }}
+        run: echo "$INPUTS"
